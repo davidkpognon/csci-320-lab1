@@ -6,15 +6,15 @@
 //Creating readstring function that will read what is in the file
 char* readString(char* filename) {
 
-    FILE* file =  fopen(filename,"r");//Fopen will open the file in read mode 
+    FILE* file =  fopen(filename,"read me");//Fopen will open the file in read mode 
     if (file == NULL) {//If file is empty, then reutrn a error message
-        fprintf(stderr ,"Can't find");
+        fprintf(stderr ," Can't find");
     }
     char* string = (char*) malloc(MAX_LINE_LENGTH *sizeof(char));//allocate space for the string
     
     if (string != NULL) {
         fgets(string,MAX_LINE_LENGTH,file);
-        fclose(file);//closes the file pointer
+        fclose(file);//closes ethe file pointer
 } else {
     free(string);
 }
